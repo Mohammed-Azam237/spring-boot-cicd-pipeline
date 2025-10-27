@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         //sh 'echo passed'
-        git branch: 'main', url: 'https://github.com/Mohammed-Azam237/Jenkins-Zero-To-Hero.git'
+        git branch: 'main', url: 'https://github.com/Mohammed-Azam237/spring-boot-cicd-pipeline.git'
       }
     }
     stage('Build and Test') {
@@ -58,7 +58,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
+            GIT_REPO_NAME = "spring-boot-cicd-pipeline"
             GIT_USER_NAME = "Mohammed-Azam237"
         }
         steps {
